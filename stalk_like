@@ -1,0 +1,11 @@
+git clone https://github.com/clearclown/twitter_likes.git
+cd twitter_likes
+
+BEARER_TOKEN=your_bearer_token
+AUTH_TOKEN=your_auth_token
+CT0=your_ct0_token
+COOKIE='your_cookie_data'
+
+docker build -t twitter-likes-app ./app
+
+docker run --env-file .env -p 8000:8000 twitter-likes-app
